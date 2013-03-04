@@ -4,11 +4,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.config.notification_sound=Proxima.ogg \
   ro.config.alarm_alert=Cesium.ogg
 
-# Copy specific ROM files
-PRODUCT_COPY_FILES += \
-    vendor/pa/prebuilt/common/apk/SuperSU.apk:system/app/SuperSU.apk \
-    vendor/pa/prebuilt/common/xbin/su:system/xbin/su
-
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/pa/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
@@ -17,6 +12,9 @@ PRODUCT_COPY_FILES += \
 
 # T-Mobile theme engine
 include vendor/pa/config/themes_common.mk
+
+# Embed SuperUser in Settings
+SUPERUSER_EMBEDDED := true
 
 # PK Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/pk/overlay/pk/common
@@ -50,7 +48,6 @@ PRODUCT_COPY_FILES += \
     vendor/pk/prebuilt/apk/ParanoidWallpapers.apk:system/app/ParanoidWallpapers.apk \
     vendor/pk/prebuilt/apk/CMWallpapers.apk:system/app/CMWallpapers.apk \
     vendor/pk/prebuilt/apk/SwagPapers.apk:system/app/SwagPapers.apk \
-    vendor/pk/prebuilt/apk/SuperSU.apk:system/app/SuperSU.apk \
     vendor/pk/prebuilt/pa/$(PA_CONF_SOURCE).conf:system/etc/paranoid/properties.conf \
     vendor/pk/prebuilt/pa/$(PA_CONF_SOURCE).conf:system/etc/paranoid/backup.conf
 
