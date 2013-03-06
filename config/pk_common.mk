@@ -48,8 +48,6 @@ PRODUCT_COPY_FILES += \
     vendor/pk/prebuilt/apk/ParanoidWallpapers.apk:system/app/ParanoidWallpapers.apk \
     vendor/pk/prebuilt/apk/CMWallpapers.apk:system/app/CMWallpapers.apk \
     vendor/pk/prebuilt/apk/SwagPapers.apk:system/app/SwagPapers.apk \
-    vendor/pk/prebuilt/pa/$(PA_CONF_SOURCE).conf:system/etc/paranoid/properties.conf \
-    vendor/pk/prebuilt/pa/$(PA_CONF_SOURCE).conf:system/etc/paranoid/backup.conf
 
 BOARD := $(subst pk_,,$(TARGET_PRODUCT))
 
@@ -67,7 +65,7 @@ PA_VERSION := pa_$(BOARD)-$(VERSION)-$(shell date +%0d%^b%Y-%H%M%S)
 
 # PK version
 PK_VERSION_MAJOR = 2
-PK_VERSION_MINOR = 1
+PK_VERSION_MINOR = 2
 PK_VERSION_MAINTENANCE = 0
 PK_VERSION := $(PK_VERSION_MAJOR).$(PK_VERSION_MINOR).$(PK_VERSION_MAINTENANCE)
 
