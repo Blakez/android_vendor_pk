@@ -13,7 +13,7 @@ PRODUCT_COPY_FILES += \
 
 #Include Bootanimation
 PRODUCT_COPY_FILES += \
-    vendor/pk/prebuilt/bootanimation/bootanimation.zip:system/media \
+    vendor/pk/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip \
 
 # Add stuff to etc/paranoid
 PRODUCT_COPY_FILES += \
