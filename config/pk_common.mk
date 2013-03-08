@@ -4,11 +4,31 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.config.notification_sound=Proxima.ogg \
   ro.config.alarm_alert=Cesium.ogg
 
-# Backup Tool
+# PA Stuff
 PRODUCT_COPY_FILES += \
+    vendor/pa/prebuilt/common/etc/init.pa.rc:root/init.pa.rc \
     vendor/pa/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
     vendor/pa/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
     vendor/pa/prebuilt/common/bin/50-backupScript.sh:system/addon.d/50-backupScript.sh
+
+#Include Bootanimation
+PRODUCT_COPY_FILES += \
+    vendor/pk/prebuilt/bootanimation/bootanimation.zip:system/media \
+
+# Add stuff to etc/paranoid
+PRODUCT_COPY_FILES += \
+	vendor/pk/prebuilt/paranoid/properties.conf:system/etc/paranoid/properties.conf \
+	vendor/pk/prebuilt/paranoid/backup.conf:system/etc/paranoid/backup.conf \
+	vendor/pk/prebuilt/paranoid/preferences/0_colors.xml:system/etc/paranoid/preferences/0_colors.xml \
+	vendor/pk/prebuilt/paranoid/preferences/pref_1.xml:system/etc/paranoid/preferences/pref_1.xml \
+	vendor/pk/prebuilt/paranoid/preferences/pref_2.xml:system/etc/paranoid/preferences/pref_2.xml \
+	vendor/pk/prebuilt/paranoid/preferences/pref_3.xml:system/etc/paranoid/preferences/pref_3.xml \
+	vendor/pk/prebuilt/paranoid/preferences/pref_4.xml:system/etc/paranoid/preferences/pref_4.xml \
+	vendor/pk/prebuilt/paranoid/preferences/pref_5.xml:system/etc/paranoid/preferences/pref_5.xml \
+	vendor/pk/prebuilt/paranoid/preferences/images/phablet.png:system/etc/paranoid/preferences/images/phablet.png \
+	vendor/pk/prebuilt/paranoid/preferences/images/phone.png:system/etc/paranoid/preferences/images/phone.png \
+	vendor/pk/prebuilt/paranoid/preferences/images/tablet.png:system/etc/paranoid/preferences/images/tablet.png \
+	vendor/pk/prebuilt/paranoid/preferences/images/undefined.png:system/etc/paranoid/preferences/images/undefined.png	
 
 # T-Mobile theme engine
 include vendor/pa/config/themes_common.mk
@@ -80,4 +100,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.aokp.version=$(BOARD)_jb-mr1_build-1 \
     ro.goo.developerid=thebz1 \
     ro.goo.rom=paranoidkangdroid \
-    ro.goo.version=210000000000
+    ro.goo.version=220000000000
