@@ -18,7 +18,7 @@ PRODUCT_COPY_FILES += \
 # Add stuff to etc/paranoid
 PRODUCT_COPY_FILES += \
 	vendor/pk/prebuilt/paranoid/properties.conf:system/etc/paranoid/properties.conf \
-	vendor/pk/prebuilt/paranoid/backup.conf:system/etc/paranoid/backup.conf \
+	vendor/pk/prebuilt/paranoid/properties.conf:system/etc/paranoid/backup.conf \
 	vendor/pk/prebuilt/paranoid/preferences/0_colors.xml:system/etc/paranoid/preferences/0_colors.xml \
 	vendor/pk/prebuilt/paranoid/preferences/pref_1.xml:system/etc/paranoid/preferences/pref_1.xml \
 	vendor/pk/prebuilt/paranoid/preferences/pref_2.xml:system/etc/paranoid/preferences/pref_2.xml \
