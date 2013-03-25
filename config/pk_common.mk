@@ -11,10 +11,6 @@ PRODUCT_COPY_FILES += \
     vendor/pa/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
     vendor/pa/prebuilt/common/bin/50-backupScript.sh:system/addon.d/50-backupScript.sh
 
-#Include Bootanimation
-PRODUCT_COPY_FILES += \
-    vendor/pk/prebuilt/bootanimation/bootanimation.zip:system/media/bootanimation.zip \
-
 # Add stuff to etc/paranoid
 PRODUCT_COPY_FILES += \
 	vendor/pk/prebuilt/paranoid/properties.conf:system/etc/paranoid/properties.conf \
