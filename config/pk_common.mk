@@ -81,8 +81,8 @@ PA_VERSION := pa_$(BOARD)-$(VERSION)-$(shell date +%0d%^b%Y-%H%M%S)
 
 # PK version
 PK_VERSION_MAJOR = 2
-PK_VERSION_MINOR = 3
-PK_VERSION_MAINTENANCE = 3
+PK_VERSION_MINOR = 4
+PK_VERSION_MAINTENANCE = 0
 PK_VERSION := $(PK_VERSION_MAJOR).$(PK_VERSION_MINOR).$(PK_VERSION_MAINTENANCE)
 
 TARGET_CUSTOM_RELEASETOOL := vendor/pk/tools/squisher
@@ -96,4 +96,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.aokp.version=$(BOARD)_jb-mr1_build-1 \
     ro.goo.developerid=thebz1 \
     ro.goo.rom=paranoidkangdroid \
-    ro.goo.version=233000000000
+    ro.goo.version=240000000000
