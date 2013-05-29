@@ -39,12 +39,18 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/pk/overlay/pk/common
 # AOKP Packages
 PRODUCT_PACKAGES += \
     PerformanceControl \
-    ROMControl
+    ROMControl \
+    SwagPapers \
+    PermissionsManager
 
 # AOKP Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/pk/overlay/aokp/common
 
 ### PARANOID ###
+# PARANOID Packages
+PRODUCT_PACKAGES += \
+    ParanoidWallpapers
+    
 # ParanoidAndroid Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/pa/overlay/common
 PRODUCT_PACKAGE_OVERLAYS += vendor/pa/overlay/$(TARGET_PRODUCT)
@@ -60,10 +66,7 @@ endif
 # ParanoidAndroid Proprietary
 PRODUCT_COPY_FILES += \
     vendor/pa/prebuilt/common/apk/ParanoidPreferences.apk:system/app/ParanoidPreferences.apk \
-    vendor/pa/prebuilt/common/apk/GooManager.apk:system/app/GooManager.apk \
-    vendor/pk/prebuilt/apk/ParanoidWallpapers.apk:system/app/ParanoidWallpapers.apk \
-    vendor/pk/prebuilt/apk/CMWallpapers.apk:system/app/CMWallpapers.apk \
-    vendor/pk/prebuilt/apk/SwagPapers.apk:system/app/SwagPapers.apk \
+    vendor/pa/prebuilt/common/apk/GooManager.apk:system/app/GooManager.apk
 
 BOARD := $(subst pk_,,$(TARGET_PRODUCT))
 
@@ -93,7 +96,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.pa.family=$(PA_CONF_SOURCE) \
     ro.pa.version=$(VERSION) \
     ro.papref.revision=$(PA_PREF_REVISION) \
-    ro.aokp.version=$(BOARD)_jb-mr1_build-1 \
+    ro.aokp.version=$(BOARD)_jb-mr1_milestone-1 \
     ro.goo.developerid=thebz1 \
     ro.goo.rom=paranoidkangdroid \
     ro.goo.version=240000000000
